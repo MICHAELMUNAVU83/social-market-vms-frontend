@@ -68,7 +68,7 @@ function NavBar({
             </select>
           </section>
 
-          <button className="btn btn-primary mx-5" onClick={handleLogout}>
+          <button className="btn btn-danger mx-5" onClick={handleLogout}>
             {" "}
             Logout{" "}
           </button>

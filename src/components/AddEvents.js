@@ -59,7 +59,7 @@ function AddEvents() {
     <div className="form">
       <div className="signup-container">
         <div className="left-container">
-          <h1 className="text-dark">Add an Event</h1>
+          <h1 className="text-light">Add an Event</h1>
         </div>
         <div className="right-container">
           <header>
