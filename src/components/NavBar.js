@@ -62,8 +62,9 @@ function NavBar({
               <option value="day">Day Events</option>
               <option value="night">Night Events</option>
               <option value="oldest">Events with people over 30yrs old</option>
-              <option value="youngest">Events with people under 30yrs old</option>
-            
+              <option value="youngest">
+                Events with people under 30yrs old
+              </option>
             </select>
           </section>
 
@@ -78,7 +79,7 @@ function NavBar({
             {" "}
             Login{" "}
           </Link>
-          <Link to="/" className="nav-link mx-4">
+          <Link to="/signup" className="nav-link mx-4">
             {" "}
             Sign Up{" "}
           </Link>
