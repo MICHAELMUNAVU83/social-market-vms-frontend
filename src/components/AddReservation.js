@@ -9,27 +9,26 @@ function AddReservation({ currentUserId }) {
 
   const [phone_number, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
-  console.log(currentUserId);
+
   const addReservationAction = (e) => {
     e.preventDefault();
-    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/reservations", {
-      method: "POST",
-      headers: {
-        Accepts: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name,
-        phone_number: phone_number,
-        email: email,
-        user_id: currentUserId,
-        vendor_category_id: Number(params.id),
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    fetch(
+      "https://social-market-vms-backend.herokuapp.com/api/v1/reservations",
+      {
+        method: "POST",
+        headers: {
+          Accepts: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          phone_number: phone_number,
+          email: email,
+          user_id: currentUserId,
+          vendor_category_id: Number(params.id),
+        }),
+      }
+    ).then((res) => res.json());
 
     setTimeout(() => {
       navigate("/my-reservations");

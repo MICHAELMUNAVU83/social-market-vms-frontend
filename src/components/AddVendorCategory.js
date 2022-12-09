@@ -34,25 +34,24 @@ function AddVendorCategory() {
 
   const addVendorCategory = (e) => {
     e.preventDefault();
-    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories", {
-      method: "POST",
-      headers: {
-        Accepts: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        category: category,
-        number_of_slots: number_of_slots,
-        cost_per_slot: cost,
-        vendor_passes_per_slot: vendorPassesPerSlot,
-        amenities_provided: ammenities,
-        event_id: Number(params.id),
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+    fetch(
+      "https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories",
+      {
+        method: "POST",
+        headers: {
+          Accepts: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          category: category,
+          number_of_slots: number_of_slots,
+          cost_per_slot: cost,
+          vendor_passes_per_slot: vendorPassesPerSlot,
+          amenities_provided: ammenities,
+          event_id: Number(params.id),
+        }),
+      }
+    ).then((res) => res.json());
 
     setTimeout(() => {
       navigate(`/events/${params.id}`);
@@ -92,7 +91,7 @@ function AddVendorCategory() {
           <div className="d-flex flex-column">
             <label>Number of Slots</label>
             <input
-                type="number"
+              type="number"
               value={number_of_slots}
               onChange={(e) => setNumber_of_slots(e.target.value)}
               className="form-control"

@@ -6,11 +6,13 @@ import "../Events.css";
 
 function Events({ currentUserName, setEvents, events }) {
   const handleDelete = (id) => {
-    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/events/${id}`, {
-      method: "DELETE",
-    }).then((response) => {
+    fetch(
+      `https://social-market-vms-backend.herokuapp.com/api/v1/events/${id}`,
+      {
+        method: "DELETE",
+      }
+    ).then((response) => {
       response.json().then((data) => {
-        console.log(data);
         setEvents(data);
       });
     });
@@ -19,7 +21,12 @@ function Events({ currentUserName, setEvents, events }) {
   const AllEvents = events.map((event) => (
     <SplideSlide>
       <div className="events-card-hover card" style={{ width: "20rem" }}>
-        <img className="card-img-top" src={event.event_poster} alt="Card " style={{ height: "20rem"}}/>
+        <img
+          className="card-img-top"
+          src={event.event_poster}
+          alt="Card "
+          style={{ height: "20rem" }}
+        />
         <div className="card-body">
           <h4 className="card-title">{event.name}</h4>
           <p className="card-text">Date of Event: {event.date}</p>
@@ -58,8 +65,6 @@ function Events({ currentUserName, setEvents, events }) {
           autoplay: true,
           speed: 10000,
           pagination: false,
-          type: "loop",
-
           interval: 6000,
           rewindByDrag: true,
           drag: "free",
@@ -70,9 +75,7 @@ function Events({ currentUserName, setEvents, events }) {
         {events.length > 0 ? (
           AllEvents
         ) : (
-          <h1 className="text-center">
-            No Events Available
-          </h1>
+          <h1 className="text-center">No Events Available</h1>
         )}
       </Splide>
     </div>

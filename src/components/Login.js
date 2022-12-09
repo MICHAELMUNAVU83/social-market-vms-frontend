@@ -30,7 +30,7 @@ function Login({ setStoredToken }) {
       .then((data) => {
         if (data.token) {
           localStorage.setItem("token", data.token);
-          console.log(data);
+
           setStoredToken(data.token);
           navigate("/");
         } else {

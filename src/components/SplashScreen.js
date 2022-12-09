@@ -7,7 +7,7 @@ function SplashScreen() {
       <div className="splash-screen-content">
         <h1 className="text-center">Welcome to the SOCIAL MARKET VMS</h1>
         <small className="splash-screen-text">
-          Please login or register to book your next vending space at the
+          Please login or sign up to book your next vending space at the
           hottest events in your Kenya{" "}
         </small>
         <div className="my-2">
