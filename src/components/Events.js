@@ -65,8 +65,6 @@ function Events({ currentUserName, setEvents, events }) {
           autoplay: true,
           speed: 10000,
           pagination: false,
-          type: "loop",
-
           interval: 6000,
           rewindByDrag: true,
           drag: "free",
