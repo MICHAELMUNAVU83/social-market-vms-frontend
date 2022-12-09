@@ -110,7 +110,8 @@ function EachEvent({ currentUserName }) {
           <span>Things to be provided:</span>{" "}
           <span>{eventVendorCategory.amenities_provided}</span>
         </p>
-        {eventVendorCategory.number_of_slots > 0 ? (
+        {eventVendorCategory.number_of_slots > 0 &&
+        currentUserName !== "admin" ? (
           <div class="d-flex justify-content-center">
             <Link
               to={`/vendor_categories/${eventVendorCategory.id}`}
@@ -119,11 +120,7 @@ function EachEvent({ currentUserName }) {
               Book a slot for this Category
             </Link>
           </div>
-        ) : (
-          <div>
-            <p class="text-center">No slots available for this category</p>
-          </div>
-        )}
+        ) : null}
 
         {currentUserName === "admin" && (
           <div class="d-flex justify-content-center my-2">
