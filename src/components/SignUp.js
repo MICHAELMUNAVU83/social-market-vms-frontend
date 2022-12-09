@@ -85,7 +85,7 @@ function SignUp({ setStoredToken }) {
                           <div className="d-flex ">
                             <MdMarkEmailUnread size={40} />
                             <input
-                              type="text"
+                              type="email"
                               name="email"
                               className="form-control mx-2"
                               value={email}

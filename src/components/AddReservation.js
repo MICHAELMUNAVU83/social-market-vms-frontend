@@ -47,15 +47,17 @@ function AddReservation({ currentUserId }) {
         />
         <label>Phone Number</label>
         <input
-          type="text"
+          type="number"
+          placeholder="Enter your phone number"
           value={phone_number}
           onChange={(e) => setPhoneNumber(e.target.value)}
           className="form-control"
         />
         <label>Email</label>
         <input
-          type="text"
+          type="email"
           value={email}
+          placeholder="Enter your email"
           onChange={(e) => setEmail(e.target.value)}
           className="form-control"
         />
