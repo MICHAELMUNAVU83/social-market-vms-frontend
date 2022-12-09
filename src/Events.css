@@ -1,0 +1,8 @@
+.events-card-hover {
+  margin-left: 3%;
+}
+
+.events-card-hover:hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
