@@ -7,7 +7,7 @@ function EachCategory() {
 
   const [vendorCategory, setVendorCategory] = useState({});
   useEffect(() => {
-    fetch(`/api/v1/vendor_categories/${params.id}`)
+    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${params.id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

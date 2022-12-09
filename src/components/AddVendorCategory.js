@@ -34,7 +34,7 @@ function AddVendorCategory() {
 
   const addVendorCategory = (e) => {
     e.preventDefault();
-    fetch("/api/v1/vendor_categories", {
+    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories", {
       method: "POST",
       headers: {
         Accepts: "application/json",

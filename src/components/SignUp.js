@@ -11,7 +11,7 @@ function SignUp({ setStoredToken }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("/api/v1/users", {
+    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/users", {
       method: "POST",
       headers: {
         Accepts: "application/json",
