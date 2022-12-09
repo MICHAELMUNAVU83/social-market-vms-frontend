@@ -20,7 +20,8 @@ This is a site that will connect Vending companies with their customers. It will
 
 [Live Demo Link](https://social-market-vms.netlify.app/)
 
-## LINK TO BACKEND 
+## LINK TO BACKEND
+
 [Backend Github Repo](https://github.com/MICHAELMUNAVU83/social-market-vms-backend)
 [Backend Live Link](https://social-market-vms-backend.herokuapp.com/)
 
@@ -45,6 +46,17 @@ To install npm install
 ## RUN
 
 To run npm start
+
+## TEST
+
+To add events use the username and password below
+
+username: admin
+password: 123456
+
+You can also create your own account or login with an existing account
+username: test
+password: 123456
 
 ## 📝 License
 
