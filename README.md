@@ -1,4 +1,7 @@
-![news-today-image](https://user-images.githubusercontent.com/86654131/187967240-3d223da3-d33f-490d-81ee-5c605071dc9c.png)
+
+![Front end Picture](https://user-images.githubusercontent.com/86654131/206749689-f10d14e2-e320-4877-8274-1820dc6cd323.png)
+
+
 
 # Project Name
 
@@ -10,11 +13,11 @@ This is a site that will connect Vending companies with their customers. It will
 
 # BUILT USING
 
-- HTML
+- REACT
 - CSS
 - JAVASCRIPT
 - BOOTSTRAP
-- REACT
+
 
 ## Live Demo
 
