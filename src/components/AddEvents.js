@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../AddEvents.css";
 
+
 function AddEvents() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -58,7 +59,7 @@ function AddEvents() {
     <div className="form">
       <div className="signup-container">
         <div className="left-container">
-          <h1>SOCIAL MARKET VMS</h1>
+          <h1 className="text-dark">Add an Event</h1>
         </div>
         <div className="right-container">
           <header>
