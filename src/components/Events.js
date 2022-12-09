@@ -34,7 +34,7 @@ function Events({ currentUserName, setEvents, events }) {
           <div className="d-flex justify-content-center">
             <Link
               className="btn btn-primary text-center"
-              to={`https://social-market-vms-backend.herokuapp.com/events/${event.id}`}
+              to={`/events/${event.id}`}
             >
               See Available vending Categories
             </Link>
