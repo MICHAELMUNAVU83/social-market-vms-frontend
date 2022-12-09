@@ -6,14 +6,13 @@ function AllReservations() {
       .then((res) => res.json())
       .then((data) => {
         setReservations(data);
-        console.log(data);
       });
   }, []);
   const allReservations = reservations.map((reservation) => (
     <div className="card my-4">
       <div className="card-header text-center">
-        Here are the details of your vending reservation for {" "}
-        {reservation.name} with phone number {reservation.phone_number}
+        Here are the details of your vending reservation for {reservation.name}{" "}
+        with phone number {reservation.phone_number}
       </div>
       <div className="d-flex justify-content-center  container">
         <div className="card-body">
@@ -54,7 +53,7 @@ function AllReservations() {
         </div>
       </div>
       <div className="card-footer text-center text-muted">
-        Contact {reservation.name} to pay  the reservation fee of{" "}
+        Contact {reservation.name} to pay the reservation fee of{" "}
         {reservation.vendor_category.cost_per_slot}
       </div>
     </div>
@@ -62,7 +61,13 @@ function AllReservations() {
 
   return (
     <div className="container">
-      {reservations.length > 0 ? allReservations : <h1 className="text-center">There have been no reservations made yet</h1>}
+      {reservations.length > 0 ? (
+        allReservations
+      ) : (
+        <h1 className="text-center">
+          There have been no reservations made yet
+        </h1>
+      )}
     </div>
   );
 }

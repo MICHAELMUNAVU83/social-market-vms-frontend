@@ -6,20 +6,25 @@ function EachEvent({ currentUserName }) {
   const params = useParams();
   const [event, setEvent] = useState({});
   useEffect(() => {
-    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`)
+    fetch(
+      `https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`
+    )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setEvent(data);
-        console.log(currentUserName);
       });
   }, [currentUserName, params.id]);
 
   const handleDelete = (id) => {
-    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${id}`, {
-      method: "DELETE",
-    }).then(() => {
-      fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`)
+    fetch(
+      `https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${id}`,
+      {
+        method: "DELETE",
+      }
+    ).then(() => {
+      fetch(
+        `https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`
+      )
         .then((res) => res.json())
         .then((data) => {
           setEvent(data);
@@ -94,7 +99,7 @@ function EachEvent({ currentUserName }) {
           <span>{eventVendorCategory.cost_per_slot}</span>
         </p>
         <p>
-          <span>Slots left:</span> 
+          <span>Slots left:</span>
           <span>{eventVendorCategory.number_of_slots} </span>
         </p>
         <p>

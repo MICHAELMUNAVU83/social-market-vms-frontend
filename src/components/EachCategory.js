@@ -7,10 +7,11 @@ function EachCategory() {
 
   const [vendorCategory, setVendorCategory] = useState({});
   useEffect(() => {
-    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${params.id}`)
+    fetch(
+      `https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${params.id}`
+    )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setVendorCategory(data);
       });
   }, [params.id]);
@@ -26,11 +27,14 @@ function EachCategory() {
           </h6>
           <p className="card-text">
             You will receive {vendorCategory.vendor_passes_per_slot} passes to
-            the event at a cost of {vendorCategory.cost_per_slot} {""} .
-            You will be provided with {vendorCategory.amenities_provided} {""} .
-            to vend under the {vendorCategory.category} category 
+            the event at a cost of {vendorCategory.cost_per_slot} {""} . You
+            will be provided with {vendorCategory.amenities_provided} {""} . to
+            vend under the {vendorCategory.category} category
           </p>
-          <Link to={`/add-reservation/${vendorCategory.id}`} className="btn btn-primary d-flex justify-content-center">
+          <Link
+            to={`/add-reservation/${vendorCategory.id}`}
+            className="btn btn-primary d-flex justify-content-center"
+          >
             Reserve a slot
           </Link>
         </div>

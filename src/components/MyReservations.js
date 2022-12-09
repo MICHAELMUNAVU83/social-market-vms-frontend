@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 function MyReservations({ currrentUserName, currentUserId }) {
-  console.log(currrentUserName, currentUserId);
   const [reservations, setReservations] = useState([]);
   useEffect(() => {
     fetch(
@@ -10,7 +9,6 @@ function MyReservations({ currrentUserName, currentUserId }) {
       .then((res) => res.json())
       .then((data) => {
         setReservations(data);
-        console.log(data);
       });
   }, [currentUserId]);
 
