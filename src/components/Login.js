@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -31,7 +34,16 @@ function Login({ setStoredToken }) {
           setStoredToken(data.token);
           navigate("/");
         } else {
-          alert("Invalid credentials");
+          toast.error("Invalid Credentials", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         }
       });
 
@@ -56,7 +68,10 @@ function Login({ setStoredToken }) {
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                          <label className="form-label fw-bold" for="form3Example3c">
+                          <label
+                            className="form-label fw-bold"
+                            for="form3Example3c"
+                          >
                             Username
                           </label>
                           <div className="d-flex">
@@ -75,7 +90,10 @@ function Login({ setStoredToken }) {
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                          <label className="form-label fw-bold" for="form3Example3c">
+                          <label
+                            className="form-label fw-bold"
+                            for="form3Example3c"
+                          >
                             Password
                           </label>
                           <div className="d-flex ">
@@ -98,7 +116,10 @@ function Login({ setStoredToken }) {
                       </div>
 
                       <div className="form-check d-flex justify-content-center mb-5">
-                        Already have an account ? <Link className="mx-2" to="/signup">Signup</Link>
+                        Already have an account ?{" "}
+                        <Link className="mx-2" to="/signup">
+                          Signup
+                        </Link>
                       </div>
                     </form>
                   </div>
@@ -115,6 +136,7 @@ function Login({ setStoredToken }) {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }
