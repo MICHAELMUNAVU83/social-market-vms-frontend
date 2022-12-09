@@ -6,7 +6,7 @@ import "../Events.css";
 
 function Events({ currentUserName, setEvents, events }) {
   const handleDelete = (id) => {
-    fetch(`/api/v1/events/${id}`, {
+    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/events/${id}`, {
       method: "DELETE",
     }).then((response) => {
       response.json().then((data) => {
@@ -27,7 +27,7 @@ function Events({ currentUserName, setEvents, events }) {
           <div className="d-flex justify-content-center">
             <Link
               className="btn btn-primary text-center"
-              to={`/events/${event.id}`}
+              to={`https://social-market-vms-backend.herokuapp.com/events/${event.id}`}
             >
               See Available vending Categories
             </Link>

@@ -6,7 +6,7 @@ function EachEvent({ currentUserName }) {
   const params = useParams();
   const [event, setEvent] = useState({});
   useEffect(() => {
-    fetch(`/api/v1/events/${params.id}`)
+    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -16,10 +16,10 @@ function EachEvent({ currentUserName }) {
   }, [currentUserName, params.id]);
 
   const handleDelete = (id) => {
-    fetch(`/api/v1/vendor_categories/${id}`, {
+    fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${id}`, {
       method: "DELETE",
     }).then(() => {
-      fetch(`/api/v1/events/${params.id}`)
+      fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`)
         .then((res) => res.json())
         .then((data) => {
           setEvent(data);

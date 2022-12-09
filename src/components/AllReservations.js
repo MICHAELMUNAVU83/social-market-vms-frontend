@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 function AllReservations() {
   const [reservations, setReservations] = useState([]);
   useEffect(() => {
-    fetch("/api/v1/reservations")
+    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/reservations")
       .then((res) => res.json())
       .then((data) => {
         setReservations(data);

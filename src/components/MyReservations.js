@@ -4,7 +4,9 @@ function MyReservations({ currrentUserName, currentUserId }) {
   console.log(currrentUserName, currentUserId);
   const [reservations, setReservations] = useState([]);
   useEffect(() => {
-    fetch(`/api/v1/reservations/${currentUserId}`)
+    fetch(
+      `https://social-market-vms-backend.herokuapp.com/api/v1/reservations/${currentUserId}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setReservations(data);
@@ -13,11 +15,16 @@ function MyReservations({ currrentUserName, currentUserId }) {
   }, [currentUserId]);
 
   const handleDelete = (id) => {
-    fetch(`/api/v1/reservations/${id}`, {
-      method: "DELETE",
-    }).then((response) => {
+    fetch(
+      `https://social-market-vms-backend.herokuapp.com/api/v1/reservations/${id}`,
+      {
+        method: "DELETE",
+      }
+    ).then((response) => {
       response.json().then((data) => {
-        fetch(`/api/v1/reservations/${currentUserId}`)
+        fetch(
+          `https://social-market-vms-backend.herokuapp.com/api/v1/reservations/${currentUserId}`
+        )
           .then((res) => res.json())
           .then((data) => {
             setReservations(data);
@@ -88,7 +95,11 @@ function MyReservations({ currrentUserName, currentUserId }) {
 
   return (
     <div className="container">
-      {reservations.length > 0 ? MyReservations : <h1 className="text-center">You have no reservations</h1>}
+      {reservations.length > 0 ? (
+        MyReservations
+      ) : (
+        <h1 className="text-center">You have no reservations</h1>
+      )}
     </div>
   );
 }

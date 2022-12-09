@@ -12,7 +12,7 @@ function AddReservation({ currentUserId }) {
   console.log(currentUserId);
   const addReservationAction = (e) => {
     e.preventDefault();
-    fetch("/api/v1/reservations", {
+    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/reservations", {
       method: "POST",
       headers: {
         Accepts: "application/json",

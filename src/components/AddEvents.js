@@ -31,7 +31,7 @@ function AddEvents() {
 
   const addAnEvent = (e) => {
     e.preventDefault();
-    fetch("/api/v1/events", {
+    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/events", {
       method: "POST",
       headers: {
         Accepts: "application/json",
