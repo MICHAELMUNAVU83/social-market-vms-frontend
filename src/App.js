@@ -11,6 +11,7 @@ import EachCategory from "./components/EachCategory";
 import MyReservations from "./components/MyReservations";
 import AllReservations from "./components/AllReservations";
 import AddReservation from "./components/AddReservation";
+import SplashScreen from "./components/SplashScreen";
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
   const [currentUserName, setCurrentUserName] = useState("");
@@ -60,14 +61,16 @@ function App() {
   return (
     <div>
       <Router>
-        <NavBar
-          storedToken={storedToken}
-          setStoredToken={setStoredToken}
-          currentUserName={currentUserName}
-          currentUserId={currentUserId}
-          setFilterQuery={setFilterQuery}
-          setQuery={setQuery}
-        />
+        {storedToken ? (
+          <NavBar
+            storedToken={storedToken}
+            setStoredToken={setStoredToken}
+            currentUserName={currentUserName}
+            currentUserId={currentUserId}
+            setFilterQuery={setFilterQuery}
+            setQuery={setQuery}
+          />
+        ) : null}
         {storedToken ? (
           <Routes>
             <Route
@@ -124,8 +127,9 @@ function App() {
           </Routes>
         ) : (
           <Routes>
+            <Route path="/" element={<SplashScreen />} />
             <Route
-              path="/"
+              path="/signup"
               element={<SignUp setStoredToken={setStoredToken} />}
             />
 
