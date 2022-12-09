@@ -14,7 +14,6 @@ function Events({ currentUserName, setEvents, events }) {
         setEvents(data);
       });
     });
-    alert("Event deleted");
   };
 
   const AllEvents = events.map((event) => (
@@ -50,8 +49,6 @@ function Events({ currentUserName, setEvents, events }) {
 
   return (
     <div>
-      <h3 className="text-center">Events</h3>
-
       <hr></hr>
       <Splide
         className="container"
@@ -69,7 +66,13 @@ function Events({ currentUserName, setEvents, events }) {
         }}
         aria-label="My Favorite Images"
       >
-        {events.length > 0 ? AllEvents : <h3>No Events Found</h3>}
+        {events.length > 0 ? (
+          AllEvents
+        ) : (
+          <h1 className="text-center">
+            No Events Available
+          </h1>
+        )}
       </Splide>
     </div>
   );

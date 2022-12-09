@@ -88,7 +88,7 @@ function MyReservations({ currrentUserName, currentUserId }) {
 
   return (
     <div className="container">
-      {reservations.length > 0 ? MyReservations : "No reservations"}
+      {reservations.length > 0 ? MyReservations : <h1 className="text-center">You have no reservations</h1>}
     </div>
   );
 }
