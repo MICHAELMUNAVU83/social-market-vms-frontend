@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 import {IoMdCall} from "react-icons/io"
 import {MdEmail} from "react-icons/md"
 import {FaUser} from "react-icons/fa"
@@ -53,13 +51,12 @@ function AddReservation({ currentUserId }) {
 
         <label className="my-1">Phone Number <IoMdCall/></label>
 
-        <PhoneInput
-          placeholder="Enter phone number"
+        <input
+          type="number"
           value={phone_number}
-          country={"ke"}
-          onChange={(e) => {
-            setPhoneNumber(e);
-          }}
+          placeholder="Enter your phone number"
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          className="form-control"
         />
 
         <label className="my-1">Email <MdEmail/></label>
