@@ -36,7 +36,7 @@ function Events({ currentUserName, setEvents, events }) {
               className="btn btn-primary text-center"
               to={`/events/${event.id}`}
             >
-              See Available vending Categories
+              See Available Vending Categories
             </Link>
           </div>
           {currentUserName === "admin" ? (

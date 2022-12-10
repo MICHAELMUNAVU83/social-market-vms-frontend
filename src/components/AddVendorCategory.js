@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import {GiReceiveMoney} from "react-icons/gi"
 function AddVendorCategory() {
   const params = useParams();
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ function AddVendorCategory() {
 
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">
-            <label>Cost:</label>
+          <label>Cost: <GiReceiveMoney/></label>
             <input
               type="number"
               value={cost}
