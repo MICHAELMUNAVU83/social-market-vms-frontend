@@ -24,6 +24,9 @@ function NavBar({
             {" "}
             Home{" "}
           </Link>
+          <Link to="/events" className="nav-link mx-2 w-100">
+            Events
+          </Link>
           {currentUserName === "admin" ? (
             <Link to="/all-reservations" className="nav-link mx-2 w-75">
               {" "}

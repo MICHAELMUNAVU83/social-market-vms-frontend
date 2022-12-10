@@ -12,6 +12,7 @@ import MyReservations from "./components/MyReservations";
 import AllReservations from "./components/AllReservations";
 import AddReservation from "./components/AddReservation";
 import SplashScreen from "./components/SplashScreen";
+import HomePage from "./components/HomePage";
 import "./App.css";
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -75,7 +76,7 @@ function App() {
         {storedToken ? (
           <Routes>
             <Route
-              path="/"
+              path="/events"
               element={
                 <Events
                   currentUserName={currentUserName}
@@ -88,6 +89,7 @@ function App() {
               path="/events/:id"
               element={<EachEvent currentUserName={currentUserName} />}
             />
+            <Route path="/" element={<HomePage />} />
             {currentUserName === "admin" ? (
               <Route path="/add-events" element={<AddEvents />} />
             ) : null}
