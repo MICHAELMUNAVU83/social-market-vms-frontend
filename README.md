@@ -26,7 +26,7 @@ This is a site that will connect Vending companies with their customers. It will
 ## LINK TO BACKEND
 
 [Backend Github Repo](https://github.com/MICHAELMUNAVU83/social-market-vms-backend)
-[Backend Live Link](https://social-market-vms-backend.herokuapp.com/)
+
 
 ## Author
 
