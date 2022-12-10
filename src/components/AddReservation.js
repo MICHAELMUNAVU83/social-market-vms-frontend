@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import {IoMdCall} from "react-icons/io"
+import {MdEmail} from "react-icons/md"
+import {FaUser} from "react-icons/fa"
 
 function AddReservation({ currentUserId }) {
   const navigate = useNavigate();
   const params = useParams();
   const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
 
   const [phone_number, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
@@ -40,7 +42,7 @@ function AddReservation({ currentUserId }) {
   const addReservationDiv = (
     <div className="d-flex justify-content-center">
       <form onSubmit={addReservationAction} className="d-flex flex-column">
-        <label>Name</label>
+        <label className="my-1">Name <FaUser/></label>
         <input
           type="text"
           placeholder="Enter your name"
@@ -49,7 +51,7 @@ function AddReservation({ currentUserId }) {
           className="form-control"
         />
 
-        <label>Phone Number</label>
+        <label className="my-1">Phone Number <IoMdCall/></label>
 
         <PhoneInput
           placeholder="Enter phone number"
@@ -60,7 +62,7 @@ function AddReservation({ currentUserId }) {
           }}
         />
 
-        <label>Email</label>
+        <label className="my-1">Email <MdEmail/></label>
         <input
           type="email"
           value={email}

@@ -41,38 +41,40 @@ function EachEvent({ currentUserName }) {
               <h1 class="card-title">{event.name}</h1>
               <p>
                 <span className="font-italic">Venue of the event: </span>
-                <span>{event.venue}</span>
+                <span className="each-specs">{event.venue}</span>
               </p>
               <p>
                 <span className="font-italic">Date of the event: </span>
-                <span>{event.date}</span>
+                <span className="each-specs">{event.date}</span>
               </p>
               <p>
                 <span className="font-italic">Time the event starts: </span>
-                <span>{event.time_event_starts}</span>
+                <span className="each-specs">{event.time_event_starts}</span>
               </p>
               <p>
                 <span className="font-italic">
                   Main artists for the event:{" "}
                 </span>
-                <span>{event.artists}</span>
+                <span className="each-specs">{event.artists}</span>
               </p>
               <p>
                 <span className="font-italic">
                   Estimated number of attendees:{" "}
                 </span>
-                <span>{event.number_of_atendees}</span>
+                <span className="each-specs">{event.number_of_atendees.toLocaleString()}</span>
               </p>
               <p>
                 <span className="font-italic">Average age of attendees: </span>
-                <span>{event.average_age}</span>
+                <span className="each-specs">{event.average_age}</span>
               </p>
 
               <p>
                 <span className="font-italic">
                   Highest gender representation:{" "}
                 </span>
-                <span>{event.highest_gender_represented}</span>
+                <span className="each-specs">
+                  {event.highest_gender_represented}
+                </span>
               </p>
             </div>
           </div>
@@ -148,6 +150,15 @@ function EachEvent({ currentUserName }) {
           </Link>
         </div>
       ) : null}
+      {eventVendorCategories.length === 0 ? (
+        <h1 className="text-center card-title text-underline my-3">
+          No Vendor Categories for this event
+        </h1>
+      ) : (
+        <h1 className="text-center card-title text-underline my-3">
+          Vendor Categories for this event
+        </h1>
+      )}
       <div class="row justify-content-around d-flex flex-wrap">
         {eventVendorCategories}
       </div>
