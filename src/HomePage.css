@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&family=Combo&family=Comfortaa&family=Dancing+Script:wght@500&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz,wght@8..144,600&display=swap");
+
 .home-with-background {
   background-image: url("./images/home.jpg");
   background-position: fixed;
@@ -14,7 +16,15 @@
   justify-content: center;
   height: 70%;
 }
-
+.home-with-background .home-first-div h1 {
+  font-family: "Roboto Serif", serif;
+}
+.home-with-background .home-first-div p {
+  font-family: "Roboto Serif", serif;
+}
+.home-with-background .home-first-div span {
+  font-family: 'Merienda', cursive;
+}
 .each-service-card {
   height: 20rem;
   width: 20rem;

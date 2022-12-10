@@ -9,6 +9,7 @@ import { BsInstagram } from "react-icons/bs";
 import { FiTwitter } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -16,13 +17,21 @@ function HomePage() {
       <section className="home-with-background">
         <div className="home-first-div">
           <h1>
-            We provide the <span>BEST CONDITIONS</span>
+            <span>SOCIAL MARKET VMS</span>
           </h1>
           <p>
-            We provide the best conditions for your <span>vending</span> at the{" "}
-            <span>best events </span> In Kenya
+            We provide best information{" "}
+            <span>about vending spaces events </span> In kenya {"  "}
           </p>
+          <p>
+            
+            <h1>Book your space now</h1>
+          </p>
+          <Link to="/events">
+            <button className="btn btn-lg btn-dark">See Events</button>
+          </Link>
         </div>
+
         <div className="home-second-div d-flex justify-content-around">
           <div className="each-service-card text-center d-flex flex-column align-items-center">
             <img
@@ -62,6 +71,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
       <section className="what-we-do">
         <div className="what-we-do-first-div d-flex justify-content-around">
           <div>

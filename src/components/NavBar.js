@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 function NavBar({
   currentUserName,
   storedToken,
@@ -25,8 +24,8 @@ function NavBar({
             {" "}
             Home{" "}
           </Link>
-          <Link to="/home" className="nav-link mx-2 w-100">
-            HomePage
+          <Link to="/events" className="nav-link mx-2 w-100">
+            Events
           </Link>
           {currentUserName === "admin" ? (
             <Link to="/all-reservations" className="nav-link mx-2 w-75">

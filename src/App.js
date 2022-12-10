@@ -76,7 +76,7 @@ function App() {
         {storedToken ? (
           <Routes>
             <Route
-              path="/"
+              path="/events"
               element={
                 <Events
                   currentUserName={currentUserName}
@@ -89,7 +89,7 @@ function App() {
               path="/events/:id"
               element={<EachEvent currentUserName={currentUserName} />}
             />
-            <Route path="/home" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             {currentUserName === "admin" ? (
               <Route path="/add-events" element={<AddEvents />} />
             ) : null}

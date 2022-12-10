@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../AddEvents.css";
 
-
 function AddEvents() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -51,7 +50,7 @@ function AddEvents() {
     });
 
     setTimeout(() => {
-      navigate("/");
+      navigate("/events");
     }, 1000);
   };
 
@@ -193,7 +192,7 @@ function AddEvents() {
               <button
                 id="back"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/events");
                 }}
               >
                 Back
