@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import {IoMdCall} from "react-icons/io"
+import {MdEmail} from "react-icons/md"
+import {FaUser} from "react-icons/fa"
 
 function AddReservation({ currentUserId }) {
   const navigate = useNavigate();
@@ -37,7 +40,7 @@ function AddReservation({ currentUserId }) {
   const addReservationDiv = (
     <div className="d-flex justify-content-center">
       <form onSubmit={addReservationAction} className="d-flex flex-column">
-        <label>Name</label>
+        <label className="my-1">Name <FaUser/></label>
         <input
           type="text"
           placeholder="Enter your name"
@@ -45,15 +48,18 @@ function AddReservation({ currentUserId }) {
           onChange={(e) => setName(e.target.value)}
           className="form-control"
         />
-        <label>Phone Number</label>
+
+        <label className="my-1">Phone Number <IoMdCall/></label>
+
         <input
           type="number"
-          placeholder="Enter your phone number"
           value={phone_number}
+          placeholder="Enter your phone number"
           onChange={(e) => setPhoneNumber(e.target.value)}
           className="form-control"
         />
-        <label>Email</label>
+
+        <label className="my-1">Email <MdEmail/></label>
         <input
           type="email"
           value={email}

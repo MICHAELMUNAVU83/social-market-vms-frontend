@@ -1,0 +1,22 @@
+.reservation-title{
+    font-family: 'Kanit', sans-serif;
+  
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: #181818;
+    text-shadow: 0px 2px 2px #a6f8d5;
+}
+
+.reservation-span{
+    font-family: 'Comfortaa', cursive;
+}
+
+.top-reservation-details{
+    font-family: 'Delius', cursive;
+    font-size: 1.3em;
+}
+
+.bottom-reservation-details{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+}

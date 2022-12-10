@@ -28,15 +28,21 @@ function Events({ currentUserName, setEvents, events }) {
           style={{ height: "20rem" }}
         />
         <div className="card-body">
-          <h4 className="card-title">{event.name}</h4>
-          <p className="card-text">Date of Event: {event.date}</p>
-          <p className="card-text">Time of Event: {event.time_event_starts}</p>
+          <h4 className="titles">{event.name}</h4>
+          <div className="d-flex justify-content-center my-1">
+            <span className="font-italic mx-1">Venue of the event: </span>
+            <span className="paragraphs">{event.venue}</span>
+          </div>
+          <div className="d-flex justify-content-center my-1">
+            <span className="font-italic mx-1">Time event starts: </span>
+            <span className="paragraphs">{event.time_event_starts}</span>
+          </div>
           <div className="d-flex justify-content-center">
             <Link
               className="btn btn-primary text-center"
               to={`/events/${event.id}`}
             >
-              See Available vending Categories
+              See Available Vending Categories
             </Link>
           </div>
           {currentUserName === "admin" ? (

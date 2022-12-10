@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&family=Combo&family=Comfortaa&family=Dancing+Script:wght@500&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz,wght@8..144,600&display=swap");
+
+.titles {
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
+
+  margin-bottom: 10px;
+}
+
+.paragraphs {
+  font-family: "Comfortaa", cursive;
+  
+}

@@ -41,38 +41,40 @@ function EachEvent({ currentUserName }) {
               <h1 class="card-title">{event.name}</h1>
               <p>
                 <span className="font-italic">Venue of the event: </span>
-                <span>{event.venue}</span>
+                <span className="each-specs">{event.venue}</span>
               </p>
               <p>
                 <span className="font-italic">Date of the event: </span>
-                <span>{event.date}</span>
+                <span className="each-specs">{event.date}</span>
               </p>
               <p>
                 <span className="font-italic">Time the event starts: </span>
-                <span>{event.time_event_starts}</span>
+                <span className="each-specs">{event.time_event_starts}</span>
               </p>
               <p>
                 <span className="font-italic">
                   Main artists for the event:{" "}
                 </span>
-                <span>{event.artists}</span>
+                <span className="each-specs">{event.artists}</span>
               </p>
               <p>
                 <span className="font-italic">
                   Estimated number of attendees:{" "}
                 </span>
-                <span>{event.number_of_atendees}</span>
+                <span className="each-specs">{event.number_of_atendees}</span>
               </p>
               <p>
                 <span className="font-italic">Average age of attendees: </span>
-                <span>{event.average_age}</span>
+                <span className="each-specs">{event.average_age}</span>
               </p>
 
               <p>
                 <span className="font-italic">
                   Highest gender representation:{" "}
                 </span>
-                <span>{event.highest_gender_represented}</span>
+                <span className="each-specs">
+                  {event.highest_gender_represented}
+                </span>
               </p>
             </div>
           </div>
@@ -90,25 +92,25 @@ function EachEvent({ currentUserName }) {
         class="col-4 m-5 bg-light rounded p-1 eachevent"
         style={{ height: "300px" }}
       >
-        <p>
-          <span>Event category:</span>{" "}
-          <span>{eventVendorCategory.category}</span>
+        <p className="mx-2 font-weight-bold">
+          <span className="arimo">Event category:</span>{" "}
+          <span className="dancing">{eventVendorCategory.category}</span>
         </p>
-        <p>
-          <span>Cost:</span> Ksh
+        <p className="mx-2">
+          <span className="arimo">Cost:</span> Ksh
           <span>{eventVendorCategory.cost_per_slot}</span>
         </p>
-        <p>
-          <span>Slots left:</span>
-          <span>{eventVendorCategory.number_of_slots} </span>
+        <p className="mx-2">
+          <span className="arimo">Slots left:</span>
+          <span className="dancing">{eventVendorCategory.number_of_slots} </span>
         </p>
-        <p>
-          <span>Vendor passes provided:</span>{" "}
-          <span>{eventVendorCategory.vendor_passes_per_slot}</span>
+        <p className="mx-2">
+          <span className="arimo">Vendor passes provided:</span>{" "}
+          <span className="dancing">{eventVendorCategory.vendor_passes_per_slot}</span>
         </p>
-        <p>
-          <span>Things to be provided:</span>{" "}
-          <span>{eventVendorCategory.amenities_provided}</span>
+        <p className="mx-2">
+          <span className="arimo" >Things to be provided:</span>{" "}
+          <span className="dancing">{eventVendorCategory.amenities_provided}</span>
         </p>
         {eventVendorCategory.number_of_slots > 0 &&
         currentUserName !== "admin" ? (
@@ -148,6 +150,9 @@ function EachEvent({ currentUserName }) {
           </Link>
         </div>
       ) : null}
+
+      {}
+
       <div class="row justify-content-around d-flex flex-wrap">
         {eventVendorCategories}
       </div>

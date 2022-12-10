@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { GiReceiveMoney } from "react-icons/gi";
+import { RiNumbersFill } from "react-icons/ri";
+
+import { IoTicketOutline } from "react-icons/io5";
+import { BiFoodMenu } from "react-icons/bi";
+
+import { GiBarracksTent } from "react-icons/gi";
+
 
 function AddVendorCategory() {
   const params = useParams();
@@ -10,6 +18,7 @@ function AddVendorCategory() {
   const [ammenities, setAmmenities] = useState("");
   const [cost, setCost] = useState("");
   const [number_of_slots, setNumber_of_slots] = useState("");
+
 
   const vendorCategoris = [
     "Main Bar",
@@ -60,10 +69,13 @@ function AddVendorCategory() {
 
   return (
     <div className="container d-flex justify-content-center flex-column">
+      
       <form onSubmit={addVendorCategory}>
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">
-            <label>Category</label>
+            <label>
+              Category <BiFoodMenu />
+            </label>
             <select
               onChange={(e) => setCategory(e.target.value)}
               className="form-select"
@@ -77,7 +89,9 @@ function AddVendorCategory() {
 
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">
-            <label>Cost:</label>
+            <label>
+              Cost <GiReceiveMoney />
+            </label>
             <input
               type="number"
               value={cost}
@@ -89,7 +103,9 @@ function AddVendorCategory() {
 
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">
-            <label>Number of Slots</label>
+            <label>
+              Number of Slots <RiNumbersFill />
+            </label>
             <input
               type="number"
               value={number_of_slots}
@@ -100,7 +116,9 @@ function AddVendorCategory() {
         </div>
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">
-            <label>Vendor Passes Per Slot</label>
+            <label>
+              Vendor Passes Per Slot <IoTicketOutline />
+            </label>
             <input
               type="number"
               value={vendorPassesPerSlot}
@@ -112,7 +130,9 @@ function AddVendorCategory() {
 
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">
-            <label>Ammenities</label>
+            <label>
+              Ammenities Provided <GiBarracksTent />
+            </label>
             <input
               type="text"
               value={ammenities}
