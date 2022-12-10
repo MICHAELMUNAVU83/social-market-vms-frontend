@@ -61,7 +61,7 @@ function EachEvent({ currentUserName }) {
                 <span className="font-italic">
                   Estimated number of attendees:{" "}
                 </span>
-                <span className="each-specs">{event.number_of_atendees.toLocaleString()}</span>
+                <span className="each-specs">{event.number_of_atendees}</span>
               </p>
               <p>
                 <span className="font-italic">Average age of attendees: </span>
@@ -92,25 +92,25 @@ function EachEvent({ currentUserName }) {
         class="col-4 m-5 bg-light rounded p-1 eachevent"
         style={{ height: "300px" }}
       >
-        <p>
-          <span>Event category:</span>{" "}
-          <span>{eventVendorCategory.category}</span>
+        <p className="mx-2 font-weight-bold">
+          <span className="arimo">Event category:</span>{" "}
+          <span className="dancing">{eventVendorCategory.category}</span>
         </p>
-        <p>
-          <span>Cost:</span> Ksh
+        <p className="mx-2">
+          <span className="arimo">Cost:</span> Ksh
           <span>{eventVendorCategory.cost_per_slot}</span>
         </p>
-        <p>
-          <span>Slots left:</span>
-          <span>{eventVendorCategory.number_of_slots} </span>
+        <p className="mx-2">
+          <span className="arimo">Slots left:</span>
+          <span className="dancing">{eventVendorCategory.number_of_slots} </span>
         </p>
-        <p>
-          <span>Vendor passes provided:</span>{" "}
-          <span>{eventVendorCategory.vendor_passes_per_slot}</span>
+        <p className="mx-2">
+          <span className="arimo">Vendor passes provided:</span>{" "}
+          <span className="dancing">{eventVendorCategory.vendor_passes_per_slot}</span>
         </p>
-        <p>
-          <span>Things to be provided:</span>{" "}
-          <span>{eventVendorCategory.amenities_provided}</span>
+        <p className="mx-2">
+          <span className="arimo" >Things to be provided:</span>{" "}
+          <span className="dancing">{eventVendorCategory.amenities_provided}</span>
         </p>
         {eventVendorCategory.number_of_slots > 0 &&
         currentUserName !== "admin" ? (
@@ -150,15 +150,9 @@ function EachEvent({ currentUserName }) {
           </Link>
         </div>
       ) : null}
-      {eventVendorCategories.length === 0 ? (
-        <h1 className="text-center card-title text-underline my-3">
-          No Vendor Categories for this event
-        </h1>
-      ) : (
-        <h1 className="text-center card-title text-underline my-3">
-          Vendor Categories for this event
-        </h1>
-      )}
+
+      {}
+
       <div class="row justify-content-around d-flex flex-wrap">
         {eventVendorCategories}
       </div>
