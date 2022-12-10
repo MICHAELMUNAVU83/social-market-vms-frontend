@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 function AddReservation({ currentUserId }) {
   const navigate = useNavigate();
   const params = useParams();
   const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
 
   const [phone_number, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
@@ -45,14 +48,18 @@ function AddReservation({ currentUserId }) {
           onChange={(e) => setName(e.target.value)}
           className="form-control"
         />
+
         <label>Phone Number</label>
-        <input
-          type="number"
-          placeholder="Enter your phone number"
+
+        <PhoneInput
+          placeholder="Enter phone number"
           value={phone_number}
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          className="form-control"
+          country={"ke"}
+          onChange={(e) => {
+            setPhoneNumber(e);
+          }}
         />
+
         <label>Email</label>
         <input
           type="email"

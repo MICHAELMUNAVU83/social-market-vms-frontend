@@ -8,6 +8,8 @@ import { IoTicketOutline } from "react-icons/io5";
 import { BiFoodMenu } from "react-icons/bi";
 
 import { GiBarracksTent } from "react-icons/gi";
+
+
 function AddVendorCategory() {
   const params = useParams();
   const navigate = useNavigate();
@@ -16,6 +18,7 @@ function AddVendorCategory() {
   const [ammenities, setAmmenities] = useState("");
   const [cost, setCost] = useState("");
   const [number_of_slots, setNumber_of_slots] = useState("");
+
 
   const vendorCategoris = [
     "Main Bar",
@@ -66,6 +69,7 @@ function AddVendorCategory() {
 
   return (
     <div className="container d-flex justify-content-center flex-column">
+      
       <form onSubmit={addVendorCategory}>
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">
