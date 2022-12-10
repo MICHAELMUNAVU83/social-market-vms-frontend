@@ -57,12 +57,18 @@
   text-align: center;
 }
 
-footer{
+footer {
   background-color: #000;
   color: #fff;
   height: 100%;
   width: 100%;
   padding: 1rem;
   text-align: center;
+
   font-size: 1.5rem;
+}
+
+.social-media-icons {
+  font-size: 2rem;
+  margin: 1%;
 }

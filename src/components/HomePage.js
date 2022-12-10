@@ -1,11 +1,15 @@
 import React from "react";
 import "../HomePage.css";
-
 import strategy_pic from "../images/strategy.jpg";
 import marketing_pic from "../images/marketing.jpg";
 import partnership_pic from "../images/partnerships.jpg";
 import informed_pic from "../images/informed.png";
 import partner from "../images/partner.png";
+import { BsInstagram } from "react-icons/bs";
+import { FiTwitter } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
+import { FiPhoneCall } from "react-icons/fi";
+
 function HomePage() {
   return (
     <div>
@@ -88,7 +92,15 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <footer>Heyyy</footer>
+      <footer>
+        <div className="d-flex justify-content-center">
+          <BsInstagram className="social-media-icons" />
+          <FiTwitter className="social-media-icons" />
+          <HiOutlineMail className="social-media-icons" />
+
+          <FiPhoneCall className="social-media-icons" />
+        </div>
+      </footer>
     </div>
   );
 }
