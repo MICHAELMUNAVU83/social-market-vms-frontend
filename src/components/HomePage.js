@@ -60,7 +60,7 @@ function HomePage() {
           <div className="each-service-card text-center  d-flex flex-column align-items-center">
             <img
               src={partnership_pic}
-              alt="marketing"
+              alt="partnership"
               className="each-service-img"
             />
             <h2>PARTNERSHIPS</h2>
