@@ -23,7 +23,7 @@
   font-family: "Roboto Serif", serif;
 }
 .home-with-background .home-first-div span {
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
 }
 .each-service-card {
   height: 20rem;
@@ -81,4 +81,13 @@ footer {
 .social-media-icons {
   font-size: 2rem;
   margin: 1%;
+}
+
+.page-details-text {
+  font-family: "Roboto Serif", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }

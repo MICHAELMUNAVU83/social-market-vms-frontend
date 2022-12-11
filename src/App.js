@@ -13,6 +13,7 @@ import AllReservations from "./components/AllReservations";
 import AddReservation from "./components/AddReservation";
 import SplashScreen from "./components/SplashScreen";
 import HomePage from "./components/HomePage";
+
 import "./App.css";
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));

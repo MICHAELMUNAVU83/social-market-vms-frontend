@@ -36,7 +36,7 @@
 }
 .font-italic {
   color: #181818;
-  text-shadow: 0px 2px 2px #a6f8d5;
+  text-shadow: 0px 1px 1px blueviolet;
   font-family: "Delius", cursive;
 }
 

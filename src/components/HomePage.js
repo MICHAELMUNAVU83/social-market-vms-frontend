@@ -78,7 +78,7 @@ function HomePage() {
             <img src={informed_pic} alt="informed" />
           </div>
           <div>
-            <h6>
+            <h6  className="text-wrap page-details-text">
               By making a resrvation with us, you will be informed about the
               events. We form a lasting partnership with you so you will get the
               first call when there's an event.
@@ -87,15 +87,15 @@ function HomePage() {
         </div>
         <div className="what-we-do-first-div d-flex justify-content-around">
           <div>
-            <h6 className="text-wrap ">
+            <h6 className="text-wrap page-details-text ">
               We provide the best information about the best events in Kenya.
               You will see the number of people who will attend the event and
               plan stock accordingly.
             </h6>
-            <h6 className="text-wrap">
+            <h6 className="text-wrap  page-details-text">
               We will also provide you with details of gender
             </h6>
-            <h6>and age of the people who will attend the event.</h6>
+            <h6 className=" page-details-text">and age of the people who will attend the event.</h6>
           </div>
           <div>
             <img src={partner} alt="informed" />

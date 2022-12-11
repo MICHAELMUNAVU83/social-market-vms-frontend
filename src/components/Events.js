@@ -63,27 +63,51 @@ function Events({ currentUserName, setEvents, events }) {
   return (
     <div>
       <hr></hr>
-      <Splide
-        className="container"
-        options={{
-          perPage: 2,
-          arrows: false,
-          autoplay: true,
-          speed: 10000,
-          pagination: false,
-          interval: 6000,
-          rewindByDrag: true,
-          drag: "free",
-          gap: "1rem",
-        }}
-        aria-label="My Favorite Images"
-      >
-        {events.length > 0 ? (
-          AllEvents
-        ) : (
-          <h1 className="text-center">No Events Available</h1>
-        )}
-      </Splide>
+      {window.innerWidth > 800 ? (
+        <Splide
+          className="container"
+          options={{
+            perPage: 2,
+            arrows: false,
+            autoplay: true,
+            speed: 10000,
+            pagination: false,
+            interval: 6000,
+            rewindByDrag: true,
+            drag: "free",
+            gap: "1rem",
+          }}
+          aria-label="My Favorite Images"
+        >
+          {events.length > 0 ? (
+            AllEvents
+          ) : (
+            <h1 className="text-center">No Events Available</h1>
+          )}
+        </Splide>
+      ) : (
+        <Splide
+          className="container"
+          options={{
+            perPage: 1,
+            arrows: false,
+            autoplay: true,
+            speed: 10000,
+            pagination: false,
+            interval: 6000,
+            rewindByDrag: true,
+            drag: "free",
+            gap: "1rem",
+          }}
+          aria-label="My Favorite Images"
+        >
+          {events.length > 0 ? (
+            AllEvents
+          ) : (
+            <h1 className="text-center">No Events Available</h1>
+          )}
+        </Splide>
+      )}
     </div>
   );
 }
