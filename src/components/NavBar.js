@@ -25,9 +25,9 @@ function NavBar({
   };
 
   return (
-    <nav className="navbar-light bg-light d-flex justify-content-between py-2">
+    <nav className="navbar-light bg-light d-flex justify-content-between py-1">
       <div onClick={handleClicked} className="nav-icon">
-        <i>{click ? <FaTimes /> : <FaBars />}</i>
+        <i className="fs-1">{click ? <FaTimes /> : <FaBars />}</i>
       </div>
       <div className={click ? "nav-menu active " : "nav-menu"}>
         <Link to="/" className="navbar-brand" onClick={handleClicked}>
