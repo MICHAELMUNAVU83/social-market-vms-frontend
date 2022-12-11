@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "../Navbar.css";
+
+import { FaTimes, FaBars } from "react-icons/fa";
 
 function NavBar({
   currentUserName,
@@ -16,35 +19,52 @@ function NavBar({
     navigate("/");
   };
 
-  return (
-    <div className="navbar bg-light d-flex justify-content-between">
-      {storedToken ? (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link to="/" className="navbar-brand">
-            {" "}
-            Home{" "}
-          </Link>
-          <Link to="/events" className="nav-link mx-2 w-100">
-            Events
-          </Link>
-          {currentUserName === "admin" ? (
-            <Link to="/all-reservations" className="nav-link mx-2 w-75">
-              {" "}
-              All Reservations
-            </Link>
-          ) : (
-            <Link to="/my-reservations" className="nav-link mx-2 w-100">
-              {" "}
-              My Reservations
-            </Link>
-          )}
-          {currentUserName === "admin" ? (
-            <Link to="/add-events" className="nav-link w-75">
-              {" "}
-              Add Events
-            </Link>
-          ) : null}
+  const [click, setClick] = useState(false);
+  const handleClicked = () => {
+    setClick(!click);
+  };
 
+  return (
+    <nav className="navbar-light bg-light d-flex justify-content-between py-2">
+      <div onClick={handleClicked} className="nav-icon">
+        <i>{click ? <FaTimes /> : <FaBars />}</i>
+      </div>
+      <div className={click ? "nav-menu active " : "nav-menu"}>
+        <Link to="/" className="navbar-brand" onClick={handleClicked}>
+          {" "}
+          Home{" "}
+        </Link>
+        <Link to="/events" className="nav-link mx-3 " onClick={handleClicked}>
+          Events
+        </Link>
+        {currentUserName === "admin" ? (
+          <Link
+            to="/all-reservations"
+            className="nav-link"
+            onClick={handleClicked}
+          >
+            {" "}
+            All Reservations
+          </Link>
+        ) : (
+          <Link
+            to="/my-reservations"
+            className="nav-link  w-100 "
+            onClick={handleClicked}
+          >
+            {" "}
+            My Reservations
+          </Link>
+        )}
+        {currentUserName === "admin" ? (
+          <Link to="/add-events" className="nav-link w-75">
+            {" "}
+            Add Events
+          </Link>
+        ) : null}
+      </div>
+      {window.innerWidth > 600 && (
+        <div className="d-flex flex-row">
           <input
             class="form-control w-100"
             type="text"
@@ -55,7 +75,7 @@ function NavBar({
             }}
           />
           <section
-            className=" w-100 mx-5"
+            className=" w-100 mx-2"
             onChange={(e) => setQuery(e.target.value)}
           >
             <select class="form-select w-100 mx-5">
@@ -70,25 +90,16 @@ function NavBar({
               </option>
             </select>
           </section>
-
-          <button className="btn btn-danger mx-5" onClick={handleLogout}>
-            {" "}
-            Logout{" "}
-          </button>
-        </nav>
-      ) : (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link to="/login" className="nav-link mx-4">
-            {" "}
-            Login{" "}
-          </Link>
-          <Link to="/signup" className="nav-link mx-4">
-            {" "}
-            Sign Up{" "}
-          </Link>
-        </nav>
+        </div>
       )}
-    </div>
+
+      <div>
+        <button className="btn btn-danger mx-5" onClick={handleLogout}>
+          {" "}
+          Logout{" "}
+        </button>
+      </div>
+    </nav>
   );
 }
 

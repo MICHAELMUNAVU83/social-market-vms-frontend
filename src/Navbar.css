@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo&family=Comfortaa&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&display=swap");
 nav {
   display: flex;
-  background-color: #f0a8c6;
+  background-color: white;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
@@ -9,25 +9,9 @@ nav {
   top: 0;
   z-index: 20;
   font-family: "Delius", cursive;
-  font-size: 2rem;
-  margin-bottom: 1.5%;
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  max-width: 1500px;
+  font-size: 1.3rem;
 }
 
-.nav-logo {
-  color: red;
-  margin-left: 20px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-}
 .nav-menu {
   display: flex;
   text-align: center;
@@ -73,11 +57,11 @@ nav {
     transition: all 0.5s ease-in-out;
   }
   .nav-menu.active {
-    background: #f0a8c6;
+    background: white;
     left: 0px;
     opacity: 1;
     transition: all 0.5s ease-in-out;
-    z-index: 1;
+    
   }
   .nav-links {
     color: red;
@@ -86,6 +70,7 @@ nav {
     display: block;
     margin-right: 2%;
     cursor: pointer;
+    font-size: larger;
   }
 
   .nav-icon i {
