@@ -4,7 +4,13 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "../Events.css";
 
-function Events({ currentUserName, setEvents, events , setFilterQuery, setQuery}) {
+function Events({
+  currentUserName,
+  setEvents,
+  events,
+  setFilterQuery,
+  setQuery,
+}) {
   const handleDelete = (id) => {
     fetch(
       `https://social-market-vms-backend.herokuapp.com/api/v1/events/${id}`,
@@ -72,6 +78,23 @@ function Events({ currentUserName, setEvents, events , setFilterQuery, setQuery}
             setFilterQuery(e.target.value);
           }}
         />
+      )}
+
+      {window.innerWidth < 800 && (
+        <section
+          className=" d-flex justify-content-center my-2 w-75 mx-auto"
+          onChange={(e) => setQuery(e.target.value)}
+        >
+          <select class="form-select">
+            <option value="">All events</option>
+            <option value="male">Male dominated events </option>
+            <option value="female">Female dominated events</option>
+            <option value="day">Day Events</option>
+            <option value="night">Night Events</option>
+            <option value="oldest">Events with people over 30yrs old</option>
+            <option value="youngest">Events with people under 30yrs old</option>
+          </select>
+        </section>
       )}
       <hr></hr>
       {window.innerWidth > 800 ? (
