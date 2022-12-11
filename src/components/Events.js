@@ -70,7 +70,7 @@ function Events({
     <div>
       {window.innerWidth < 800 && (
         <input
-          class="form-control w-75 my-2 d-flex justify-content-center mx-auto"
+          className="form-control w-75 my-2 d-flex justify-content-center mx-auto"
           type="text"
           placeholder="Search for an event"
           aria-label="Search"
