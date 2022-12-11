@@ -110,6 +110,9 @@ function HomePage() {
 
           <FiPhoneCall className="social-media-icons" />
         </div>
+        <div className="footer-text">
+          the social market vms &copy; 2021
+        </div>
       </footer>
     </div>
   );
