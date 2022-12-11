@@ -4,7 +4,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "../Events.css";
 
-function Events({ currentUserName, setEvents, events }) {
+function Events({ currentUserName, setEvents, events , setFilterQuery, setQuery}) {
   const handleDelete = (id) => {
     fetch(
       `https://social-market-vms-backend.herokuapp.com/api/v1/events/${id}`,
@@ -62,6 +62,17 @@ function Events({ currentUserName, setEvents, events }) {
 
   return (
     <div>
+      {window.innerWidth < 800 && (
+        <input
+          class="form-control w-75 my-2 d-flex justify-content-center mx-auto"
+          type="text"
+          placeholder="Search for an event"
+          aria-label="Search"
+          onChange={(e) => {
+            setFilterQuery(e.target.value);
+          }}
+        />
+      )}
       <hr></hr>
       {window.innerWidth > 800 ? (
         <Splide

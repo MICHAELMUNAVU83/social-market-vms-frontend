@@ -83,6 +83,8 @@ function App() {
                   currentUserName={currentUserName}
                   events={events}
                   setEvents={setEvents}
+                  setFilterQuery={setFilterQuery}
+                  setQuery={setQuery}
                 />
               }
             />

@@ -57,7 +57,7 @@ function NavBar({
           </Link>
         )}
         {currentUserName === "admin" ? (
-          <Link to="/add-events" className="nav-link w-75">
+          <Link to="/add-events" className="nav-link mx-2">
             {" "}
             Add Events
           </Link>
