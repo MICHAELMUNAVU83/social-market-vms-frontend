@@ -16,23 +16,22 @@ function HomePage() {
     <div>
       <section className="home-with-background">
         <div className="home-first-div">
-          <h1>
+          <h1 className="text-center">
             <span>SOCIAL MARKET VMS</span>
           </h1>
-          <p>
+          <p className="text-center">
             We provide best information{" "}
             <span>about vending spaces events </span> In kenya {"  "}
           </p>
-          <p>
-            
-            <h1>Book your space now</h1>
-          </p>
+
+          <h1 className="text-center">Book your space now</h1>
+
           <Link to="/events">
             <button className="btn btn-lg btn-dark">See Events</button>
           </Link>
         </div>
 
-        <div className="home-second-div d-flex justify-content-around">
+        <div className="home-second-div">
           <div className="each-service-card text-center d-flex flex-column align-items-center">
             <img
               src={strategy_pic}
@@ -78,7 +77,7 @@ function HomePage() {
             <img src={informed_pic} alt="informed" />
           </div>
           <div>
-            <h6  className="text-wrap page-details-text">
+            <h6 className="text-wrap page-details-text">
               By making a resrvation with us, you will be informed about the
               events. We form a lasting partnership with you so you will get the
               first call when there's an event.
@@ -95,7 +94,9 @@ function HomePage() {
             <h6 className="text-wrap  page-details-text">
               We will also provide you with details of gender
             </h6>
-            <h6 className=" page-details-text">and age of the people who will attend the event.</h6>
+            <h6 className=" page-details-text">
+              as well as the age group of the people who will attend the event.
+            </h6>
           </div>
           <div>
             <img src={partner} alt="informed" />
@@ -110,9 +111,7 @@ function HomePage() {
 
           <FiPhoneCall className="social-media-icons" />
         </div>
-        <div className="footer-text">
-          the social market vms &copy; 2021
-        </div>
+        <div className="footer-text">the social market vms &copy; 2021</div>
       </footer>
     </div>
   );

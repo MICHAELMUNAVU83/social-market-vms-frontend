@@ -7,7 +7,6 @@
   background-color: dark;
   background-size: cover;
   height: 100vh;
- 
 }
 .home-with-background .home-first-div {
   display: flex;
@@ -16,7 +15,12 @@
   align-items: center;
   justify-content: center;
   height: 70%;
-  
+}
+
+.home-second-div {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
 }
 .home-with-background .home-first-div h1 {
   font-family: "Roboto Serif", serif;
@@ -93,10 +97,19 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.footer-text{
+.footer-text {
   font-family: "Roboto Serif", serif;
   font-size: 1rem;
   font-style: italic;
   text-align: center;
- 
+}
+
+@media only screen and (max-width: 650px) {
+  .home-second-div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-around;
+    height: 100%;
+  }
 }
