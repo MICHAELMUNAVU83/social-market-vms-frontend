@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     if (storedToken) {
-      fetch("https://social-market-vms-backend.herokuapp.com/api/v1/profile ", {
+      fetch("https://pacific-retreat-64786.herokuapp.com/api/v1/profile ", {
         method: "GET",
         headers: {
           Accepts: "application/json",
@@ -39,7 +39,7 @@ function App() {
 
           setCurrentUserId(data.user.id);
         });
-      fetch("https://social-market-vms-backend.herokuapp.com/api/v1/events")
+      fetch("https://pacific-retreat-64786.herokuapp.com/api/v1/events")
         .then((response) => response.json())
         .then((data) => {
           if (!filterQuery && !query) {
@@ -51,7 +51,9 @@ function App() {
               )
             );
           } else if (!filterQuery && query) {
-            fetch(`https://social-market-vms-backend.herokuapp.com/api/v1/${query}-events`)
+            fetch(
+              `https://pacific-retreat-64786.herokuapp.com/api/v1/${query}-events`
+            )
               .then((response) => response.json())
               .then((data) => {
                 setEvents(data);

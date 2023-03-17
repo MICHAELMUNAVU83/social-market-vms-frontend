@@ -5,7 +5,7 @@ function MyReservations({ currrentUserName, currentUserId }) {
   const [reservations, setReservations] = useState([]);
   useEffect(() => {
     fetch(
-      `https://social-market-vms-backend.herokuapp.com/api/v1/reservations/${currentUserId}`
+      `https://pacific-retreat-64786.herokuapp.com/api/v1/reservations/${currentUserId}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -15,14 +15,14 @@ function MyReservations({ currrentUserName, currentUserId }) {
 
   const handleDelete = (id) => {
     fetch(
-      `https://social-market-vms-backend.herokuapp.com/api/v1/reservations/${id}`,
+      `https://pacific-retreat-64786.herokuapp.com/api/v1/reservations/${id}`,
       {
         method: "DELETE",
       }
     ).then((response) => {
       response.json().then((data) => {
         fetch(
-          `https://social-market-vms-backend.herokuapp.com/api/v1/reservations/${currentUserId}`
+          `https://pacific-retreat-64786.herokuapp.com/api/v1/reservations/${currentUserId}`
         )
           .then((res) => res.json())
           .then((data) => {

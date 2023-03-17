@@ -3,7 +3,7 @@ import "../MyReservations.css";
 function AllReservations() {
   const [reservations, setReservations] = useState([]);
   useEffect(() => {
-    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/reservations")
+    fetch("https://pacific-retreat-64786.herokuapp.com/api/v1/reservations")
       .then((res) => res.json())
       .then((data) => {
         setReservations(data);

@@ -7,7 +7,7 @@ function EachEvent({ currentUserName }) {
   const [event, setEvent] = useState({});
   useEffect(() => {
     fetch(
-      `https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`
+      `https://pacific-retreat-64786.herokuapp.com/api/v1/events/${params.id}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -17,13 +17,13 @@ function EachEvent({ currentUserName }) {
 
   const handleDelete = (id) => {
     fetch(
-      `https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${id}`,
+      `https://pacific-retreat-64786.herokuapp.com/api/v1/vendor_categories/${id}`,
       {
         method: "DELETE",
       }
     ).then(() => {
       fetch(
-        `https://social-market-vms-backend.herokuapp.com/api/v1/events/${params.id}`
+        `https://pacific-retreat-64786.herokuapp.com/api/v1/events/${params.id}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -102,15 +102,21 @@ function EachEvent({ currentUserName }) {
         </p>
         <p className="mx-2">
           <span className="arimo">Slots left:</span>
-          <span className="dancing">{eventVendorCategory.number_of_slots} </span>
+          <span className="dancing">
+            {eventVendorCategory.number_of_slots}{" "}
+          </span>
         </p>
         <p className="mx-2">
           <span className="arimo">Vendor passes provided:</span>{" "}
-          <span className="dancing">{eventVendorCategory.vendor_passes_per_slot}</span>
+          <span className="dancing">
+            {eventVendorCategory.vendor_passes_per_slot}
+          </span>
         </p>
         <p className="mx-2">
-          <span className="arimo" >Things to be provided:</span>{" "}
-          <span className="dancing">{eventVendorCategory.amenities_provided}</span>
+          <span className="arimo">Things to be provided:</span>{" "}
+          <span className="dancing">
+            {eventVendorCategory.amenities_provided}
+          </span>
         </p>
         {eventVendorCategory.number_of_slots > 0 &&
         currentUserName !== "admin" ? (

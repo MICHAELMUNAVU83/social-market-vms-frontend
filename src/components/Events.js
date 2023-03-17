@@ -12,12 +12,9 @@ function Events({
   setQuery,
 }) {
   const handleDelete = (id) => {
-    fetch(
-      `https://social-market-vms-backend.herokuapp.com/api/v1/events/${id}`,
-      {
-        method: "DELETE",
-      }
-    ).then((response) => {
+    fetch(`https://pacific-retreat-64786.herokuapp.com/api/v1/events/${id}`, {
+      method: "DELETE",
+    }).then((response) => {
       response.json().then((data) => {
         setEvents(data);
       });

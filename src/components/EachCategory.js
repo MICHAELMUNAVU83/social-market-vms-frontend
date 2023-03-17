@@ -8,7 +8,7 @@ function EachCategory() {
   const [vendorCategory, setVendorCategory] = useState({});
   useEffect(() => {
     fetch(
-      `https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories/${params.id}`
+      `https://pacific-retreat-64786.herokuapp.com/api/v1/vendor_categories/${params.id}`
     )
       .then((res) => res.json())
       .then((data) => {

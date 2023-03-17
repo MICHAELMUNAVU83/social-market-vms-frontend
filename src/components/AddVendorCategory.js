@@ -9,7 +9,6 @@ import { BiFoodMenu } from "react-icons/bi";
 
 import { GiBarracksTent } from "react-icons/gi";
 
-
 function AddVendorCategory() {
   const params = useParams();
   const navigate = useNavigate();
@@ -18,7 +17,6 @@ function AddVendorCategory() {
   const [ammenities, setAmmenities] = useState("");
   const [cost, setCost] = useState("");
   const [number_of_slots, setNumber_of_slots] = useState("");
-
 
   const vendorCategoris = [
     "Main Bar",
@@ -44,7 +42,7 @@ function AddVendorCategory() {
   const addVendorCategory = (e) => {
     e.preventDefault();
     fetch(
-      "https://social-market-vms-backend.herokuapp.com/api/v1/vendor_categories",
+      "https://pacific-retreat-64786.herokuapp.com/api/v1/vendor_categories",
       {
         method: "POST",
         headers: {
@@ -69,7 +67,6 @@ function AddVendorCategory() {
 
   return (
     <div className="container d-flex justify-content-center flex-column">
-      
       <form onSubmit={addVendorCategory}>
         <div className="d-flex justify-content-center">
           <div className="d-flex flex-column">

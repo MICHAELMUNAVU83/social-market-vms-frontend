@@ -13,7 +13,7 @@ function Login({ setStoredToken }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://social-market-vms-backend.herokuapp.com/api/v1/login", {
+    fetch("https://pacific-retreat-64786.herokuapp.com/api/v1/login", {
       method: "POST",
       headers: {
         Accepts: "application/json",
